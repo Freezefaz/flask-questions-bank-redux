@@ -1,0 +1,32 @@
+{% extends "layout.template.html" %}
+
+{{database}}
+
+{%block content%}
+    <!-- button to create a new report -->
+    <h1>All sightings <a class="btn btn-primary" href="{{ url_for('show_create_sighting_form') }}">Create</a></h1>
+
+    {% for key, value in database.items() %}
+      <div class="card">
+        <div class="card-body">
+        <!-- give the title of the report -->
+            <div class="card-title"><h2>{{value.title}}</h2></div>
+            <div>
+                <!-- buttons to edit and delete the reports -->
+                <a href="{{url_for('show_edit_sighting_form', sighting_id = key) }}" class="btn btn-primary">Edit</a>
+                <a href="{{url_for('show_delete_confirmation', sighting_id = value.id) }}" class="btn btn-danger">Delete</a> 
+            </div>
+            <ul>
+            <!-- info from the form that will be shown -->
+                <li>From: {{value.email}}</li>
+                <li>Shape Category:{{value.shape_category}}</li>
+                {% if value.shape_category == "others" %}
+                <li>Shape Description:{{value["other-shape"]}}</li>
+                {%endif%}
+                <li>Location (lat, lng): {{value.lat}}, {{value.lng}}</li>
+                <li>Description: {{value.description }}</li>
+            </ul>
+        </div>
+      </div>
+    {% endfor %}
+{%endblock%}

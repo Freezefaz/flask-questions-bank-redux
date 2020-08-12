@@ -1,0 +1,23 @@
+{% extends "layout.template.html" %}
+
+{{database}}
+
+{%block content%}
+    <h1>All Books</h1>
+
+    {% for key, value in database.items() %}
+      <div class="card">
+        <div class="card-body">
+            <div class="card-title"><h2>{{value.title}}</h2></div>
+            <ul>
+                <li>ISBN: {{value.isbn}}</li>
+                <li>Type: {{value.book_type}}</li>
+                <li>Genre: {{value.genre}}</li>
+                <li>tags: {{value.tags}}</li>
+                <li>Author: {{value.author}}</li>
+                <li>Synopsis: {{value.synopsis}}</li>
+            </ul>
+        </div>
+      </div>
+    {% endfor %}
+{%endblock%}

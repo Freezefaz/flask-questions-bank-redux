@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<title>Title</title>
+</head>
+<body>
+    <form method="POST">
+        <div>
+            <label>Enter numbers from 1, 2 or 3</label>
+            <input type="text" class="form" name="number"/>
+        </div>
+        <input type="submit">
+    </form>
+    <img src="{{picture}}">
+    <!-- src = "/static/{{image}}" if did not include in the app.py -->
+
+    <!-- Method 2 -->
+    {%if number == 1%}
+    <img src="static/1.jpg"/>
+    {%elif number == 2%}
+    <img src="static/2.jpg"/>
+    {%elif number == 3%}
+    <img src="static/3.jpg"/>
+     {%else%}
+     <p>Invalid Number</p>
+     {%end if%}
+
+     <!-- Method 3 -->
+     <!-- scalable -->
+     <img src="/static/{{number}}"/>
+
+
+</body>
+</html>

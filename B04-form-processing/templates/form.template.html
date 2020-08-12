@@ -24,6 +24,27 @@
 		<button type="submit" value="Submit">Submit</button>
 	</form>
 
+    <!-- Should be done on another form -->
+    <div>
+        <ul>
+            <li>Name: {{name}}</li>
+            <li>Sex: {{sex}}</li>
+            <li>Comment: {{comment}}</li>
+            <li>Contact: {{contact}}</li>
+            <li>Agree: {{accept}}</li>
+        </ul>
+        <!-- Alternative Dictionary method -->
+        <!-- <ul>
+            <li>Name: {{context.name}}</li>
+            <li>Sex: {{context.sex}}</li>
+            <li>Comment: {{context.comment}}</li>
+            <li>Contact: {{context.contact}}</li>
+            <li>Agree: {{context.accept}}</li>
+            <li>{%if context.contact%} Yes {%else%} No {%endif%}</li>
+            <li>terms and Conditions: {%if context.accept%} Yes {%else%} No {%endif%}</li>
+        </ul> -->
+    </div>
+
 </body>
 
 </html>

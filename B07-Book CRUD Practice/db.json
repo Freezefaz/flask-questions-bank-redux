@@ -1,0 +1,22 @@
+{
+  "f4773460-d231-11ea-8e51-7e9eb00e40a5": {
+    "id": "f4773460-d231-11ea-8e51-7e9eb00e40a5",
+    "isbn": "c580e4df-7253-4e91-acda-5f8beeed219a",
+    "title": "Harry Potter",
+    "book_type": "fiction",
+    "genre": "Fantasy",
+    "tags": "magic, growing up",
+    "author": "JK Rowling",
+    "synopsis": "Orphan becomes hero"
+  },
+  "14a457e0-d232-11ea-aa0a-7e9eb00e40a5": {
+    "id": "14a457e0-d232-11ea-aa0a-7e9eb00e40a5",
+    "isbn": "e69bb47d-dea1-45fb-8bda-18cd3ee91339",
+    "title": "Shake hands with the devil",
+    "book_type": "non-fiction",
+    "genre": "Biography",
+    "tags": "genocide, failure",
+    "author": "Romeo Dallaire",
+    "synopsis": "Rwanda genocide and the failure of UN peacekeeping"
+  }
+}

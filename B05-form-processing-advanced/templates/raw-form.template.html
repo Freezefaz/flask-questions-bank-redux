@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="POST">
+        <div>
+            <label>Name:</label>
+            <input type="text" name="name"/>
+        </div>
+        <div>
+            <label>Select your appetizers</label>
+            <input type="checkbox" name="appetizers" value="seafood"/>Overprized chilled seafood ($3.00)
+            <input type="checkbox" name="appetizers" value="fries"/>Fries Sprinkled with Fake Truffle Powder ($4.50)
+            <input type="checkbox" name="appetizers" value="salad"/>Minimal Effort Salad ($6.00)
+            <!-- 2nd method -->
+            <!-- {%for key, appetizer in appetizers.items()%} -->
+            <!-- <input type="checkbox" name="appetizers" value="{{key}}"/>{{appetizer.name}}/>({{appetizer.price}}) -->
+            <!-- {%endfor%} -->
+        </div>
+        <div>
+            <label>Select your Seating</label>
+            <input type="radio" name="seating" value="outdoors"/>Outdoors
+            <input type="radio" name="seating" value="indoors"/>Indoors
+            <input type="radio" name="seating" value="vip"/>Indoors (VIP, +$10.00)
+        </div>
+        <input type="submit"/>
+    </form>
+
+    <ul>
+        <li>Name: {{name}}</li>
+        <li>Appetizers: {{appetizer}}</li>
+        <li>Seating: {{seating}}</li>
+        <li>Total: ${{total}}</li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{%extends 'layout.template.html'%}
+
+{%block content%}
+
+<h2>UFO Sightings Report</h2>
+    <form method="POST">
+    <!-- Don't have to put {%endinclude%} -->
+      {%include "form.template.html%}
+        <input type="submit" value="report" class="report-btn">
+    </form>
+
+{%endblock%}
